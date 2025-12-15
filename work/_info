@@ -1,0 +1,373 @@
+m255
+K4
+z2
+!s11f vlog 2020.4 2020.10, Oct 13 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dd:/Digital_Circuit/Exercise
+vADDER
+Z1 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+!s110 1765190486
+!i10b 1
+!s100 I8Rf6dU@g^c4C7OK7z>0d0
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+Io3]FdjNBK6YZ:ZN>?c?IO2
+S1
+R0
+w1765190486
+Z3 8d:\Digital_Circuit\Exercise\Exercise.srcs\sources_1\new\PE.sv
+Z4 Fd:\Digital_Circuit\Exercise\Exercise.srcs\sources_1\new\PE.sv
+!i122 47
+L0 41 7
+Z5 VDg1SIo80bB@j0V0VzS_@n1
+Z6 OL;L;2020.4;71
+r1
+!s85 0
+31
+!s108 1765190486.000000
+Z7 !s107 d:\Digital_Circuit\Exercise\Exercise.srcs\sources_1\new\PE.sv|
+Z8 !s90 -nologo|-work|work|d:\Digital_Circuit\Exercise\Exercise.srcs\sources_1\new\PE.sv|
+!i113 0
+Z9 o-nologo -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z10 tCvgOpt 0
+n@a@d@d@e@r
+vAdder
+R1
+Z11 !s110 1765629918
+!i10b 1
+!s100 bmbJ28OMj87KAJTVMd:@21
+R2
+Im33XCcD;3Lab6d3MPLGdg2
+S1
+R0
+Z12 w1765629917
+R3
+R4
+!i122 2268
+L0 94 7
+R5
+R6
+r1
+!s85 0
+31
+Z13 !s108 1765629918.000000
+R7
+R8
+!i113 0
+R9
+R10
+n@adder
+vBuffer
+R1
+!s110 1765262994
+!i10b 1
+!s100 fM7D21bSghHoF<U`j``jb0
+R2
+IR[f:U<6CY=6DjQ:RI@j6P0
+S1
+R0
+w1765262994
+8d:\Digital_Circuit\Exercise\Exercise.srcs\sources_1\new\Buffer.sv
+Fd:\Digital_Circuit\Exercise\Exercise.srcs\sources_1\new\Buffer.sv
+!i122 767
+L0 23 83
+R5
+R6
+r1
+!s85 0
+31
+!s108 1765262994.000000
+!s107 d:\Digital_Circuit\Exercise\Exercise.srcs\sources_1\new\Buffer.sv|
+!s90 -nologo|-work|work|d:\Digital_Circuit\Exercise\Exercise.srcs\sources_1\new\Buffer.sv|
+!i113 0
+R9
+R10
+n@buffer
+vMatrix_Multiplication_AGU
+R1
+!s110 1765810056
+!i10b 1
+!s100 3imlM;Mo7<LF:3lecnVdE3
+R2
+ISb_F2BJAP9a[6N;JQdYY92
+S1
+R0
+w1765810056
+8d:\Digital_Circuit\Exercise\Exercise.srcs\sources_1\new\Matrix_Multiplication_AGU.sv
+Fd:\Digital_Circuit\Exercise\Exercise.srcs\sources_1\new\Matrix_Multiplication_AGU.sv
+!i122 2320
+L0 23 507
+R5
+R6
+r1
+!s85 0
+31
+!s108 1765810056.000000
+!s107 d:\Digital_Circuit\Exercise\Exercise.srcs\sources_1\new\Matrix_Multiplication_AGU.sv|
+!s90 -nologo|-work|work|d:\Digital_Circuit\Exercise\Exercise.srcs\sources_1\new\Matrix_Multiplication_AGU.sv|
+!i113 0
+R9
+R10
+n@matrix_@multiplication_@a@g@u
+vMemory
+R1
+!s110 1765626912
+!i10b 1
+!s100 6H4V:GL4GNRKQ7bd`Kk:;3
+R2
+IJN<MenUFlOl:nZ@Io`MLH3
+S1
+R0
+w1765356653
+8d:\Digital_Circuit\Exercise\Exercise.srcs\sources_1\new\Memory.sv
+Fd:\Digital_Circuit\Exercise\Exercise.srcs\sources_1\new\Memory.sv
+!i122 2226
+L0 23 68
+R5
+R6
+r1
+!s85 0
+31
+!s108 1765626912.000000
+!s107 d:\Digital_Circuit\Exercise\Exercise.srcs\sources_1\new\Memory.sv|
+!s90 -nologo|-work|work|d:\Digital_Circuit\Exercise\Exercise.srcs\sources_1\new\Memory.sv|
+!i113 0
+R9
+R10
+n@memory
+vMultiplier
+R1
+R11
+!i10b 1
+!s100 UbC7iUM;0J4dImJ[>fnLo2
+R2
+InJ9@cNMzYzJ:g7e9CH7S:2
+S1
+R0
+R12
+R3
+R4
+!i122 2268
+L0 102 9
+R5
+R6
+r1
+!s85 0
+31
+R13
+R7
+R8
+!i113 0
+R9
+R10
+n@multiplier
+vPE
+R1
+R11
+!i10b 1
+!s100 56DXCzOk24`e<KlFoPMg[0
+R2
+I``8hfG2gFB=L0laK>o;VC3
+S1
+R0
+R12
+R3
+R4
+!i122 2268
+L0 23 70
+R5
+R6
+r1
+!s85 0
+31
+R13
+R7
+R8
+!i113 0
+R9
+R10
+n@p@e
+vPE_Array
+R1
+!s110 1765628535
+!i10b 1
+!s100 Fi5znfB`NIEVoYKlVdP?V1
+R2
+I62V6^fKfQV[Lg`W5V43KW2
+S1
+R0
+w1765628535
+8d:\Digital_Circuit\Exercise\Exercise.srcs\sources_1\new\PE_Array.sv
+Fd:\Digital_Circuit\Exercise\Exercise.srcs\sources_1\new\PE_Array.sv
+!i122 2254
+L0 26 135
+R5
+R6
+r1
+!s85 0
+31
+!s108 1765628535.000000
+!s107 d:\Digital_Circuit\Exercise\Exercise.srcs\sources_1\new\PE_Array.sv|
+!s90 -nologo|-work|work|d:\Digital_Circuit\Exercise\Exercise.srcs\sources_1\new\PE_Array.sv|
+!i113 0
+R9
+R10
+n@p@e_@array
+vtb_Matrix_Multiplication_AGU
+R1
+!s110 1765808037
+!i10b 1
+!s100 lgYLcRECMUk]3YKXn:BU23
+R2
+IQJk=><[EoSO5iHdFI[W?j0
+S1
+R0
+w1765542114
+8d:\Digital_Circuit\Exercise\Exercise.srcs\sim_1\new\tb_Matrix_Multiplication_AGU.sv
+Fd:\Digital_Circuit\Exercise\Exercise.srcs\sim_1\new\tb_Matrix_Multiplication_AGU.sv
+!i122 2316
+L0 23 51
+R5
+R6
+r1
+!s85 0
+31
+!s108 1765808037.000000
+!s107 d:\Digital_Circuit\Exercise\Exercise.srcs\sim_1\new\tb_Matrix_Multiplication_AGU.sv|
+!s90 -nologo|-work|work|d:\Digital_Circuit\Exercise\Exercise.srcs\sim_1\new\tb_Matrix_Multiplication_AGU.sv|
+!i113 0
+R9
+R10
+ntb_@matrix_@multiplication_@a@g@u
+vtb_Memory
+R1
+!s110 1765356672
+!i10b 1
+!s100 K1O;28=R[4ZnzF3^ncDb13
+R2
+IhLiWhoIGXO0936oLdBPOI3
+S1
+R0
+w1765356672
+8d:\Digital_Circuit\Exercise\Exercise.srcs\sim_1\new\tb_Memory.sv
+Fd:\Digital_Circuit\Exercise\Exercise.srcs\sim_1\new\tb_Memory.sv
+!i122 1452
+L0 25 121
+R5
+R6
+r1
+!s85 0
+31
+!s108 1765356672.000000
+!s107 d:\Digital_Circuit\Exercise\Exercise.srcs\sim_1\new\tb_Memory.sv|
+!s90 -nologo|-work|work|d:\Digital_Circuit\Exercise\Exercise.srcs\sim_1\new\tb_Memory.sv|
+!i113 0
+R9
+R10
+ntb_@memory
+vtb_PE
+R1
+!s110 1765534432
+!i10b 1
+!s100 7bU=V;H>BNLBj2LX05VhI1
+R2
+I:@6K]=VJ8ghoC]1hE_74o1
+S1
+R0
+w1765268767
+8d:\Digital_Circuit\Exercise\Exercise.srcs\sim_1\new\tb_PE.sv
+Fd:\Digital_Circuit\Exercise\Exercise.srcs\sim_1\new\tb_PE.sv
+!i122 1706
+L0 23 48
+R5
+R6
+r1
+!s85 0
+31
+!s108 1765534431.000000
+!s107 d:\Digital_Circuit\Exercise\Exercise.srcs\sim_1\new\tb_PE.sv|
+!s90 -nologo|-work|work|d:\Digital_Circuit\Exercise\Exercise.srcs\sim_1\new\tb_PE.sv|
+!i113 0
+R9
+R10
+ntb_@p@e
+vtb_PE_Array
+R1
+!s110 1765627356
+!i10b 1
+!s100 _2E63Q9Y0`;T2gVhcn2df3
+R2
+Ii1?do;mZiR`S]WPGm@@`o3
+S1
+R0
+w1765625265
+8d:\Digital_Circuit\Exercise\Exercise.srcs\sim_1\new\tb_PE_Array.sv
+Fd:\Digital_Circuit\Exercise\Exercise.srcs\sim_1\new\tb_PE_Array.sv
+!i122 2239
+L0 23 126
+R5
+R6
+r1
+!s85 0
+31
+!s108 1765627356.000000
+!s107 d:\Digital_Circuit\Exercise\Exercise.srcs\sim_1\new\tb_PE_Array.sv|
+!s90 -nologo|-work|work|d:\Digital_Circuit\Exercise\Exercise.srcs\sim_1\new\tb_PE_Array.sv|
+!i113 0
+R9
+R10
+ntb_@p@e_@array
+vtb_top_test
+R1
+!s110 1765807960
+!i10b 1
+!s100 o0V2kDIdI9o4RozXCj_5=1
+R2
+IeP_?Xea20f8Z22T=HNFlh3
+S1
+R0
+w1765630240
+8d:\Digital_Circuit\Exercise\Exercise.srcs\sim_1\new\tb_top_test.sv
+Fd:\Digital_Circuit\Exercise\Exercise.srcs\sim_1\new\tb_top_test.sv
+!i122 2314
+L0 23 228
+R5
+R6
+r1
+!s85 0
+31
+!s108 1765807960.000000
+!s107 d:\Digital_Circuit\Exercise\Exercise.srcs\sim_1\new\tb_top_test.sv|
+!s90 -nologo|-work|work|d:\Digital_Circuit\Exercise\Exercise.srcs\sim_1\new\tb_top_test.sv|
+!i113 0
+R9
+R10
+vtop_test
+R1
+!s110 1765630291
+!i10b 1
+!s100 1XkG1PzI]Lkkc>f24@emW3
+R2
+I_?SDiLNR9?GYDmPBSn]Pa3
+S1
+R0
+w1765630290
+8d:\Digital_Circuit\Exercise\Exercise.srcs\sources_1\new\top_test.sv
+Fd:\Digital_Circuit\Exercise\Exercise.srcs\sources_1\new\top_test.sv
+!i122 2278
+L0 23 106
+R5
+R6
+r1
+!s85 0
+31
+!s108 1765630291.000000
+!s107 d:\Digital_Circuit\Exercise\Exercise.srcs\sources_1\new\top_test.sv|
+!s90 -nologo|-work|work|d:\Digital_Circuit\Exercise\Exercise.srcs\sources_1\new\top_test.sv|
+!i113 0
+R9
+R10

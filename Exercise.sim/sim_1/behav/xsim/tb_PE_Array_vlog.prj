@@ -1,0 +1,18 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  \
+"../../../../Exercise.srcs/sources_1/new/Matrix_Multiplication_AGU.sv" \
+"../../../../Exercise.srcs/sources_1/new/Memory.sv" \
+"../../../../Exercise.srcs/sources_1/new/PE.sv" \
+"../../../../Exercise.srcs/sources_1/new/PE_Array.sv" \
+"../../../../Exercise.srcs/sources_1/new/top_test.sv" \
+"../../../../Exercise.srcs/sim_1/new/tb_Matrix_Multiplication_AGU.sv" \
+"../../../../Exercise.srcs/sim_1/new/tb_Memory.sv" \
+"../../../../Exercise.srcs/sim_1/new/tb_PE.sv" \
+"../../../../Exercise.srcs/sim_1/new/tb_top_test.sv" \
+"../../../../Exercise.srcs/sim_1/new/tb_PE_Array.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
