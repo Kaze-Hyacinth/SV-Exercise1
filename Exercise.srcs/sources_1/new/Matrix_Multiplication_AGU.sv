@@ -73,6 +73,7 @@ module Matrix_Multiplication_AGU(
     logic [9:0] B0_add = 19;    // o_W + 1
     logic [9:0] B1_add = -282;  // -l0_max * (o_W + 1) + W_PE
     logic [9:0] r_add = 16; // l0_max + 1
+    logic [9:0] wr_bias_part1_add = 39; // 2 * output_W + W_res
     logic [9:0] wr_bias_part2_add1 = 18; // output_W - 1
     logic [9:0] wr_bias_part2_add2 = -17; // -output_W + 2
     logic [7:0] o_H = 13;
@@ -210,11 +211,19 @@ module Matrix_Multiplication_AGU(
         else begin
             if(en == 1) begin
                 if(l0_cnt == l0_max) begin
-                    if(l2_cnt == 0) begin
-                        
+                    if(l1_cnt == 0) begin
+                        if (l2_cnt == 0) begin
+                            // 对应初始化
+                            wr_add_bias_part1 <= 0;
+                        end
+                        else begin
+                            // 对应输出换行(三行后)
+                            wr_add_bias_part1 <= wr_add_bias_part1 + wr_bias_part1_add;
+                        end
                     end
                     else begin
-                        
+                        // 输出换列(三列后)
+                        wr_add_bias_part1 <= wr_add_bias_part1 + 3;
                     end
                 end
                 else begin
