@@ -145,4 +145,5 @@ module tb_PE_Array;
     );
     assign i_A = u_pe_array.i_A_0;
     assign next_ = u_pe_array.u_pe00.r_next;
+    // have a try
 endmodule
