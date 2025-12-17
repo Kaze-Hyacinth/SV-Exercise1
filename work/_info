@@ -11,7 +11,7 @@ cModel Technology
 Z0 dd:/Digital_Circuit/Exercise
 vAdder
 Z1 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
-Z2 !s110 1765629918
+Z2 !s110 1765956790
 !i10b 1
 !s100 bmbJ28OMj87KAJTVMd:@21
 Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
@@ -21,14 +21,14 @@ R0
 Z4 w1765629917
 Z5 8d:\Digital_Circuit\Exercise\Exercise.srcs\sources_1\new\PE.sv
 Z6 Fd:\Digital_Circuit\Exercise\Exercise.srcs\sources_1\new\PE.sv
-!i122 2268
+!i122 2825
 L0 94 7
 Z7 VDg1SIo80bB@j0V0VzS_@n1
 Z8 OL;L;2020.4;71
 r1
 !s85 0
 31
-Z9 !s108 1765629918.000000
+Z9 !s108 1765956790.000000
 Z10 !s107 d:\Digital_Circuit\Exercise\Exercise.srcs\sources_1\new\PE.sv|
 Z11 !s90 -nologo|-work|work|d:\Digital_Circuit\Exercise\Exercise.srcs\sources_1\new\PE.sv|
 !i113 0
@@ -89,24 +89,24 @@ R13
 n@buffer
 vMatrix_Multiplication_AGU
 R1
-!s110 1765811049
+Z14 !s110 1765957641
 !i10b 1
-!s100 _PJb2DG?R57HDU@J9GTA?1
+!s100 iWoZQ`m@2[D@ddORA8bOY2
 R3
-IQRghKhl69YlUBL1SMTzjm0
+I<IF36UPY1]1d4<alJALPC2
 S1
 R0
-w1765811049
+w1765957228
 8d:\Digital_Circuit\Exercise\Exercise.srcs\sources_1\new\Matrix_Multiplication_AGU.sv
 Fd:\Digital_Circuit\Exercise\Exercise.srcs\sources_1\new\Matrix_Multiplication_AGU.sv
-!i122 2330
-L0 23 516
+!i122 2838
+L0 23 692
 R7
 R8
 r1
 !s85 0
 31
-!s108 1765811049.000000
+Z15 !s108 1765957641.000000
 !s107 d:\Digital_Circuit\Exercise\Exercise.srcs\sources_1\new\Matrix_Multiplication_AGU.sv|
 !s90 -nologo|-work|work|d:\Digital_Circuit\Exercise\Exercise.srcs\sources_1\new\Matrix_Multiplication_AGU.sv|
 !i113 0
@@ -151,7 +151,7 @@ R0
 R4
 R5
 R6
-!i122 2268
+!i122 2825
 L0 102 9
 R7
 R8
@@ -165,6 +165,32 @@ R11
 R12
 R13
 n@multiplier
+vOutput_Reg_Array
+R1
+!s110 1765953867
+!i10b 1
+!s100 o4ZXW8:30WN=:aCnDT8cG2
+R3
+I;2oQ3FAEfD[U4MGe2]h4E1
+S1
+R0
+w1765953867
+8d:\Digital_Circuit\Exercise\Exercise.srcs\sources_1\new\Output_Reg_Array.sv
+Fd:\Digital_Circuit\Exercise\Exercise.srcs\sources_1\new\Output_Reg_Array.sv
+!i122 2741
+L0 23 188
+R7
+R8
+r1
+!s85 0
+31
+!s108 1765953867.000000
+!s107 d:\Digital_Circuit\Exercise\Exercise.srcs\sources_1\new\Output_Reg_Array.sv|
+!s90 -nologo|-work|work|d:\Digital_Circuit\Exercise\Exercise.srcs\sources_1\new\Output_Reg_Array.sv|
+!i113 0
+R12
+R13
+n@output_@reg_@array
 vPE
 R1
 R2
@@ -177,7 +203,7 @@ R0
 R4
 R5
 R6
-!i122 2268
+!i122 2825
 L0 23 70
 R7
 R8
@@ -193,24 +219,24 @@ R13
 n@p@e
 vPE_Array
 R1
-!s110 1765628535
+!s110 1765957643
 !i10b 1
-!s100 Fi5znfB`NIEVoYKlVdP?V1
+!s100 >X^1G[hM=782IKEgE03:i3
 R3
-I62V6^fKfQV[Lg`W5V43KW2
+I;02m_3U6hYe=d?EcF>e]@2
 S1
 R0
-w1765628535
+w1765951296
 8d:\Digital_Circuit\Exercise\Exercise.srcs\sources_1\new\PE_Array.sv
 Fd:\Digital_Circuit\Exercise\Exercise.srcs\sources_1\new\PE_Array.sv
-!i122 2254
+!i122 2841
 L0 26 135
 R7
 R8
 r1
 !s85 0
 31
-!s108 1765628535.000000
+R15
 !s107 d:\Digital_Circuit\Exercise\Exercise.srcs\sources_1\new\PE_Array.sv|
 !s90 -nologo|-work|work|d:\Digital_Circuit\Exercise\Exercise.srcs\sources_1\new\PE_Array.sv|
 !i113 0
@@ -219,24 +245,24 @@ R13
 n@p@e_@array
 vtb_Matrix_Multiplication_AGU
 R1
-!s110 1765808037
+R14
 !i10b 1
-!s100 lgYLcRECMUk]3YKXn:BU23
+!s100 9Ned@fISo0<Ybz3`f:E611
 R3
-IQJk=><[EoSO5iHdFI[W?j0
+I=g?@KDS84K:X:Kbc_JS8b2
 S1
 R0
-w1765542114
+w1765955990
 8d:\Digital_Circuit\Exercise\Exercise.srcs\sim_1\new\tb_Matrix_Multiplication_AGU.sv
 Fd:\Digital_Circuit\Exercise\Exercise.srcs\sim_1\new\tb_Matrix_Multiplication_AGU.sv
-!i122 2316
-L0 23 51
+!i122 2837
+L0 23 56
 R7
 R8
 r1
 !s85 0
 31
-!s108 1765808037.000000
+R15
 !s107 d:\Digital_Circuit\Exercise\Exercise.srcs\sim_1\new\tb_Matrix_Multiplication_AGU.sv|
 !s90 -nologo|-work|work|d:\Digital_Circuit\Exercise\Exercise.srcs\sim_1\new\tb_Matrix_Multiplication_AGU.sv|
 !i113 0
@@ -323,24 +349,24 @@ R13
 ntb_@p@e_@array
 vtb_top_test
 R1
-!s110 1765807960
+Z16 !s110 1765957642
 !i10b 1
-!s100 o0V2kDIdI9o4RozXCj_5=1
+!s100 2Gee1Eh=nfanI[lf>>6>R3
 R3
-IeP_?Xea20f8Z22T=HNFlh3
+ImP6b?oB0TC9mAY]B_5TL<1
 S1
 R0
-w1765630240
+w1765956658
 8d:\Digital_Circuit\Exercise\Exercise.srcs\sim_1\new\tb_top_test.sv
 Fd:\Digital_Circuit\Exercise\Exercise.srcs\sim_1\new\tb_top_test.sv
-!i122 2314
-L0 23 228
+!i122 2839
+L0 23 268
 R7
 R8
 r1
 !s85 0
 31
-!s108 1765807960.000000
+R15
 !s107 d:\Digital_Circuit\Exercise\Exercise.srcs\sim_1\new\tb_top_test.sv|
 !s90 -nologo|-work|work|d:\Digital_Circuit\Exercise\Exercise.srcs\sim_1\new\tb_top_test.sv|
 !i113 0
@@ -348,24 +374,24 @@ R12
 R13
 vtop_test
 R1
-!s110 1765630291
+R16
 !i10b 1
-!s100 1XkG1PzI]Lkkc>f24@emW3
+!s100 FTl]EXRFdM>@<cVi[27;M0
 R3
-I_?SDiLNR9?GYDmPBSn]Pa3
+IGnG@`45bY[[^:N37^TAQW0
 S1
 R0
-w1765630290
+w1765953645
 8d:\Digital_Circuit\Exercise\Exercise.srcs\sources_1\new\top_test.sv
 Fd:\Digital_Circuit\Exercise\Exercise.srcs\sources_1\new\top_test.sv
-!i122 2278
-L0 23 106
+!i122 2840
+L0 23 141
 R7
 R8
 r1
 !s85 0
 31
-!s108 1765630291.000000
+R15
 !s107 d:\Digital_Circuit\Exercise\Exercise.srcs\sources_1\new\top_test.sv|
 !s90 -nologo|-work|work|d:\Digital_Circuit\Exercise\Exercise.srcs\sources_1\new\top_test.sv|
 !i113 0

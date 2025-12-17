@@ -27,7 +27,9 @@ module top_test(
     input logic wr_en_A, wr_en_B,
     input logic [9:0] wr_add_A, wr_add_B,
     input logic [15:0] wr_data_A, wr_data_B,
-    output logic [15:0] out00, out01, out02, out10, out11, out12, out20, out21, out22
+    output logic [15:0] out00, out01, out02, out10, out11, out12, out20, out21, out22,
+    output logic [15:0] wr_data_,
+    output logic pi_on
 );  
     //==logic==
     logic [9:0] rd_add_A_0, rd_add_B_0;
@@ -38,7 +40,11 @@ module top_test(
     logic [15:0] rd_data_A_2, rd_data_B_2;
     logic next_agu;
     logic [4:0] next;
-    logic [2:0] en_row, en_col;
+    logic [2:0] en_rd_row, en_rd_col;
+    logic wr_en;
+    logic [10:0] wr_add;
+    logic [3:0] wr_sel;
+    logic [15:0] wr_data;
     //==always==
     // 比agu提供的next信号晚一拍
     always_ff @( posedge clk or posedge rst ) begin 
@@ -53,6 +59,8 @@ module top_test(
             next[4] <= next[3];
         end
     end
+
+    assign wr_data_ = wr_data;
     //==instance==
     Memory u_memory_A(
         .clk(clk),
@@ -86,12 +94,19 @@ module top_test(
         .wr_add(wr_add_B),
         .wr_data(wr_data_B)
     );
+    Memory u_memory_output(
+        .clk(clk),
+        .rst(rst),
+        .wr_en(wr_en),
+        .wr_add(wr_add),
+        .wr_data(wr_data)
+    );
     PE_Array u_pe_array(
         .clk(clk),
         .rst(rst),
         .en(en),
-        .en_col(en_col),
-        .en_row(en_row),
+        .en_rd_col(en_rd_col),
+        .en_rd_row(en_rd_row),
         .i_A_0(rd_data_A_0),
         .i_A_1(rd_data_A_1),
         .i_A_2(rd_data_A_2),
@@ -109,20 +124,40 @@ module top_test(
         .out22(out22),
         .next(next)
     );
+    Output_Reg_Array u_output_reg_array(
+        .clk(clk),
+        .rst(rst),
+        .en(en),
+        .next(next),
+        .ans00(out00),
+        .ans01(out01),
+        .ans02(out02),
+        .ans10(out10),
+        .ans11(out11),
+        .ans12(out12),
+        .ans20(out20),
+        .ans21(out21),
+        .ans22(out22),
+        .wr_data(wr_data)
+    );
     Matrix_Multiplication_AGU u_matrix_multiplication_agu(
         .clk(clk),
         .rst(rst),
         .en(en),
-        .en_col(en_col),
-        .en_row(en_row),
+        .en_rd_col(en_rd_col),
+        .en_rd_row(en_rd_row),
         .rd_basic_add_A(10'b0),
         .rd_basic_add_B(10'b0),
+        .wr_basic_add(10'b0),
         .rd_add_A_0(rd_add_A_0),
         .rd_add_A_1(rd_add_A_1),
         .rd_add_A_2(rd_add_A_2),
         .rd_add_B_0(rd_add_B_0),
         .rd_add_B_1(rd_add_B_1),
         .rd_add_B_2(rd_add_B_2),
-        .next(next_agu)
+        .wr_add(wr_add),
+        .next(next_agu),
+        .wr_en(wr_en),
+        .pi_on(pi_on)
     );
 endmodule

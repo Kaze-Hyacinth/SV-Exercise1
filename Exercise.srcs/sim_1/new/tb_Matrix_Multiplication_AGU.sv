@@ -34,9 +34,11 @@ module tb_Matrix_Multiplication_AGU;
     logic [9:0] rd_add_B_1;
     logic [9:0] rd_add_B_2;
     logic [9:0] wr_add;
+    logic wr_en;
+    logic [3:0] wr_cnt;
     logic next;
-    logic [2:0] en_row;
-    logic [2:0] en_col;
+    logic [2:0] en_rd_row;
+    logic [2:0] en_rd_col;
     logic [7:0] l0,l1,l2;
     logic [10:0] l;
     always_comb begin
@@ -44,6 +46,7 @@ module tb_Matrix_Multiplication_AGU;
         l1 = matrix_multiplication_agu_dut.l1_cnt;
         l2 = matrix_multiplication_agu_dut.l2_cnt;
         l = matrix_multiplication_agu_dut.l_cnt;
+        wr_cnt = matrix_multiplication_agu_dut.wr_cnt;
     end
     Matrix_Multiplication_AGU matrix_multiplication_agu_dut(
         .clk(clk),
@@ -58,8 +61,10 @@ module tb_Matrix_Multiplication_AGU;
         .rd_add_B_0(rd_add_B_0),
         .rd_add_B_1(rd_add_B_1),
         .rd_add_B_2(rd_add_B_2),
-        .en_row(en_row),
-        .en_col(en_col),
+        .wr_add(wr_add),
+        .wr_en(wr_en),
+        .en_rd_row(en_rd_row),
+        .en_rd_col(en_rd_col),
         .next(next)
     );
     always #5 clk = ~clk;

@@ -26,7 +26,7 @@ next信号与新的首数据一同到来, pe输出比输入延迟一个时钟
 module PE_Array(
     input logic [15:0] i_A_0, i_A_1, i_A_2,
     input logic [15:0] i_B_0, i_B_1, i_B_2,
-    input logic [2:0] en_row, en_col,
+    input logic [2:0] en_rd_row, en_rd_col,
     input logic clk,
     input logic rst,
     input logic [4:0] next,
@@ -42,11 +42,11 @@ module PE_Array(
     logic [15:0] w_col_2_01, w_col_2_12;
     logic en00, en01, en02, en10, en11 = 0, en12 = 0, en20, en21 = 0, en22 = 0;
     //==assign==
-    assign en00 = en & en_row[0] & en_col[0];
-    assign en01 = en & en_row[0] & en_col[1];
-    assign en02 = en & en_row[0] & en_col[2];
-    assign en10 = en & en_row[1] & en_col[0];
-    assign en20 = en & en_row[2] & en_col[0];
+    assign en00 = en & en_rd_row[0] & en_rd_col[0];
+    assign en01 = en & en_rd_row[0] & en_rd_col[1];
+    assign en02 = en & en_rd_row[0] & en_rd_col[2];
+    assign en10 = en & en_rd_row[1] & en_rd_col[0];
+    assign en20 = en & en_rd_row[2] & en_rd_col[0];
     //==always==
     always_ff @( posedge clk or posedge rst) begin
         if(rst == 1) begin

@@ -24,23 +24,25 @@ module tb_top_test;
     logic clk = 0;
     logic rst = 0;
     logic en = 0;
+    logic pi_on = 0;
     logic wr_en_A = 0, wr_en_B = 0;
     logic [9:0] wr_add_A = 0, wr_add_B = 0;
     logic [15:0] wr_data_A = 0 , wr_data_B = 0 ;
     logic [4:0] next;
     logic [15:0] out00, out01, out02, out10, out11, out12, out20, out21, out22;
-    logic [15:0] rd_A = 0, rd_B = 0;
-    logic [15:0] i_A_0, i_B_0;
-    logic [15:0] i_A_1, i_B_1;
-    logic [15:0] i_A_2, i_B_2;
-    logic [9:0] rd_add_A_0, rd_add_B_0;
-    logic [9:0] rd_add_A_1, rd_add_B_1;
-    logic [9:0] rd_add_A_2, rd_add_B_2;
-    logic [15:0] rd_data_A_0, rd_data_B_0;
-    logic [15:0] rd_data_A_1, rd_data_B_1;
-    logic [15:0] rd_data_A_2, rd_data_B_2;
+    logic [15:0] ans00, ans01, ans02, ans10, ans11, ans12, ans20, ans21, ans22;
+    logic [15:0] wr_data_;
+    logic [3:0] wr_sel;
+    logic [15:0] rd_A = 0, rd_B = 0, rd_o = 0;
+    logic wr_en;
+    logic [15:0] i_A_0, i_A_1, i_A_2;
+    logic [15:0] i_B_0, i_B_1, i_B_2;
+    logic [9:0] rd_add_A_0, rd_add_A_1, rd_add_A_2;  
+    logic [9:0] rd_add_B_0, rd_add_B_1, rd_add_B_2;
+    logic [15:0] rd_data_A_0, rd_data_A_1, rd_data_A_2;
+    logic [15:0] rd_data_B_0, rd_data_B_1, rd_data_B_2;
     logic en00, en01, en02, en10, en11, en12, en20, en21, en22;
-    logic [2:0] en_row, en_col;
+    logic [2:0] en_rd_row, en_rd_col;
     assign next = u_top_test.next;
     assign i_A_0 = u_top_test.u_pe_array.i_A_0;
     assign i_A_1 = u_top_test.u_pe_array.i_A_1;
@@ -69,8 +71,19 @@ module tb_top_test;
     assign en20 = u_top_test.u_pe_array.en20;
     assign en21 = u_top_test.u_pe_array.en21;
     assign en22 = u_top_test.u_pe_array.en22;
-    assign en_row = u_top_test.u_pe_array.en_row;
-    assign en_col = u_top_test.u_pe_array.en_col;
+    assign ans00 = u_top_test.u_output_reg_array.reg00;
+    assign ans01 = u_top_test.u_output_reg_array.reg01;
+    assign ans02 = u_top_test.u_output_reg_array.reg02;
+    assign ans10 = u_top_test.u_output_reg_array.reg10;
+    assign ans11 = u_top_test.u_output_reg_array.reg11;
+    assign ans12 = u_top_test.u_output_reg_array.reg12;
+    assign ans20 = u_top_test.u_output_reg_array.reg20;
+    assign ans21 = u_top_test.u_output_reg_array.reg21;
+    assign ans22 = u_top_test.u_output_reg_array.reg22;
+    assign wr_sel = u_top_test.u_output_reg_array.wr_sel;
+    assign wr_en  = u_top_test.wr_en;
+    assign en_rd_row = u_top_test.u_pe_array.en_rd_row;
+    assign en_rd_col = u_top_test.u_pe_array.en_rd_col;
     //==task==
     task automatic wr_matrix_A(
         input int H = 16,
@@ -211,6 +224,23 @@ module tb_top_test;
         end
         rd_B = 0;
     endtask 
+
+    task automatic rd_matrix_out(
+        input int H = 16,
+        input int W = 16,
+        input int base_add = 0
+    );
+        $display("Read the Output");
+        for (int i = 0; i < H; i++) begin
+            for (int j = 0; j < W; j++) begin
+                @(posedge clk);
+                rd_o = u_top_test.u_memory_output.r_memory[base_add + i * W + j];
+                $write("%d\t", rd_o);
+            end
+            $write("\n");
+        end
+        rd_o = 0;
+    endtask
     top_test u_top_test(
         .clk(clk),
         .rst(rst),
@@ -229,10 +259,12 @@ module tb_top_test;
         .out12(out12),
         .out20(out20),
         .out21(out21),
-        .out22(out22)
+        .out22(out22),
+        .wr_data_(wr_data_),
+        .pi_on(pi_on)
     );
-    logic [7:0] l;
-    assign l = u_top_test.u_matrix_multiplication_agu.l0_cnt;
+    logic [10:0] l;
+    assign l = u_top_test.u_matrix_multiplication_agu.l_cnt;
     assign next_agu = u_top_test.next_agu;
     always # 5 clk = ~clk;
     initial begin
@@ -246,5 +278,13 @@ module tb_top_test;
         rd_matrix_B(16,19);
         @(posedge clk);
         en <= 1;
+    end
+    initial begin
+        # 16320;
+        @(posedge clk);
+        en <= 1'b0;
+        # 500;
+        rd_matrix_out(14,19,0);
+        $stop;
     end
 endmodule

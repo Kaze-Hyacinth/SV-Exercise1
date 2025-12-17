@@ -5,6 +5,7 @@ sv xil_defaultlib  \
 "../../../../Exercise.srcs/sources_1/new/PE.sv" \
 "../../../../Exercise.srcs/sources_1/new/PE_Array.sv" \
 "../../../../Exercise.srcs/sources_1/new/top_test.sv" \
+"../../../../Exercise.srcs/sources_1/new/Output_Reg_Array.sv" \
 "../../../../Exercise.srcs/sim_1/new/tb_Matrix_Multiplication_AGU.sv" \
 "../../../../Exercise.srcs/sim_1/new/tb_Memory.sv" \
 "../../../../Exercise.srcs/sim_1/new/tb_PE.sv" \

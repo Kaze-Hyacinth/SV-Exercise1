@@ -1,14 +1,23 @@
 Vivado Simulator 2020.1
 Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
-Running: D:/vivado2020.1/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto 30d88744e1c647c289c9e5223a4b56cf --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_Matrix_Multiplication_AGU_behav xil_defaultlib.tb_Matrix_Multiplication_AGU xil_defaultlib.glbl -log elaborate.log 
+Running: D:/vivado2020.1/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto 30d88744e1c647c289c9e5223a4b56cf --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_top_test_behav xil_defaultlib.tb_top_test xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 11 differs from formal bit length 10 for port 'wr_add' [D:/Digital_Circuit/Exercise/Exercise.srcs/sources_1/new/top_test.sv:158]
+WARNING: [VRFC 10-3091] actual bit length 11 differs from formal bit length 10 for port 'wr_add' [D:/Digital_Circuit/Exercise/Exercise.srcs/sources_1/new/top_test.sv:101]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Memory
+Compiling module xil_defaultlib.Adder
+Compiling module xil_defaultlib.Multiplier
+Compiling module xil_defaultlib.PE
+Compiling module xil_defaultlib.PE_Array
+Compiling module xil_defaultlib.Output_Reg_Array
 Compiling module xil_defaultlib.Matrix_Multiplication_AGU
-Compiling module xil_defaultlib.tb_Matrix_Multiplication_AGU
+Compiling module xil_defaultlib.top_test
+Compiling module xil_defaultlib.tb_top_test
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot tb_Matrix_Multiplication_AGU_behav
+Built simulation snapshot tb_top_test_behav
